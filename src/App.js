@@ -1,50 +1,26 @@
 import React, { Component } from 'react';
-import bookService from './services/bookService';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+
+import BookList from './views/books/BookList';
+import BookDetail from './views/books/BookDetail';
+import BookUpdate from './views/books/BookUpdate';
+
+import { withTheme } from './Context/ThemeContext';
 
 class App extends Component {
 
-  state = {
-    books: [],
-    loading: true,
-  }
-
-  async componentDidMount() {
-    try {
-      const books = await bookService.getAllBooks()  
-      this.setState({
-        books,
-        loading: false
-      })
-    } catch (error) {
-      console.log(error);
-    }
-    // bookService.getAllBooks()
-    //   .then((books) => {
-    //     this.setState({
-    //       books,
-    //       loading: false
-    //     })
-    //   })
-    //   .catch (error => {
-    //     console.log(error);
-    //   });
-  }
-  
   render() {
-    console.log('render')
-    const { books, loading } = this.state;
+    // const { changeTheme } = this.props;
+    console.log('render App')
     return (
-      <div className="App">
-        <h1>Books</h1>
-        {!loading && books.map((book) => {
-          return (
-            <div key={book._id}>
-              {book.title}
-            </div>
-          )
-        })}
-        {loading && <div>loading...</div>}
-      </div>
+      <>
+        {/* <button onClick={changeTheme}>change</button> */}
+        <Router>
+          <Route exact path="/books" component={BookList} />
+          <Route exact path="/books/:id" component={BookDetail} />
+          <Route path="/books/:id/update" component={BookUpdate} />
+        </Router>
+      </>
     );
   }
 }

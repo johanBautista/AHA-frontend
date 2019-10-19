@@ -9,14 +9,21 @@ class BookService {
 
   getAllBooks() {
     return this.axios.get('/books')
-      .then(({ data: books }) => books);
-      // .catch((error) => {
-      //   console.log(error);
-      // })
+      .then(({ data: books }) => books)
+  }
+
+  getBookById(id){
+    return this.axios.get(`/books/${id}`)
+      .then(({ data: book }) => book);
   }
 
   createBook(body) {
     return this.axios.post('/books', body)
+      .then(({ data: book }) => book);
+  }
+
+  updateBook(book) {
+    return this.axios.put(`/books/${book._id}`, book)
       .then(({ data: book }) => book);
   }
 
