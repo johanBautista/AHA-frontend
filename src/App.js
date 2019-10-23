@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 import BookList from './views/books/BookList';
 import BookDetail from './views/books/BookDetail';
 import BookUpdate from './views/books/BookUpdate';
+import Login from './views/auth/Login';
+import Signup from './views/auth/Signup';
+import { withAuth } from './Context/AuthContext';
 
-import { withTheme } from './Context/ThemeContext';
+import PrivateRoute from './components/PrivateRoute';
+import AnonRoute from './components/AnonRoute';
 
 class App extends Component {
-
   render() {
-    // const { changeTheme } = this.props;
-    console.log('render App')
+    const { handleLogout } = this.props;
     return (
       <>
-        {/* <button onClick={changeTheme}>change</button> */}
-        <Router>
-          <Route exact path="/books" component={BookList} />
-          <Route exact path="/books/:id" component={BookDetail} />
-          <Route path="/books/:id/update" component={BookUpdate} />
-        </Router>
+          <button onClick={handleLogout}>logout</button>
+          <Router>
+            <AnonRoute exact path="/login" component={Login} />
+            <AnonRoute exact path="/signup" component={Signup} />
+            <PrivateRoute exact path="/books" component={BookList} />
+            <PrivateRoute exact path="/books/:id" component={BookDetail} />
+            <PrivateRoute path="/books/:id/update" component={BookUpdate} />
+          </Router>
       </>
     );
   }
 }
 
-export default App;
+export default withAuth(App);

@@ -1,12 +1,12 @@
 import React from 'react';
-import { withTheme } from '../../../Context/ThemeContext';
+import { withAuth } from '../../../Context/AuthContext';
 
 const CardBook = (props) => {
-  const { book: { title, author, description, rating }, theme, changeTheme } = props;
+  const { book: { title, author, description, rating }, user } = props;
   return (
       <div>
         <p>
-          BookDetail: {theme}
+          user: {user.username}
         </p>
         <label htmlFor="">title</label>
         <p>{title}</p>
@@ -16,9 +16,8 @@ const CardBook = (props) => {
         <p>{description}</p>
         <label htmlFor="">rating</label>
         <p>{rating}</p>
-        <button onClick={changeTheme}>change Theme</button>
       </div>
   );
 };
 
-export default withTheme(CardBook);
+export default withAuth(CardBook);
