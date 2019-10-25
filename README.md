@@ -1,94 +1,96 @@
-# StarterKit Frontend module 3
+## StarterKit Frontend module 3
 
-**importante** cambiar el `.env-sample` a `.env` con vuestras variables de entorno
+**importante** cambiar el `.env-sample` a `.env` con vuestras variables de entorno​
 
-# README Modulo3
-
-​
-
-# Project Name
-
-​AHA-Moment
+# ​AHA-Moment
 
 ## Description
 
-​
 We are all geniuses, the problem is not knowing what. AHA-Moment is the app where you can save your thoughts of lucidity and also, read, search and vote on the ideas of others
 ​
-
 ## User Stories
 
-​
-**404** - As a user I want to see a nice 404 page when I go to a page that doesn’t exist so that I know it was my fault
-​
-**500** - As a user I want to see a nice error page when the super team screws it up so that I know that is not my fault
-​
-**Homepage** - As a user I want to be able to access the homepage so that I see what the app is about and login and signup,I can also filter the quotes by topic, author or ranking.
-​
-**Sign up** - As a user I want to sign up on the webpage so that I can see all the events that I could attend
-​
-**Login** - As a user I want to be able to log in on the webpage so that I can get back to my account. Once registered (speaker), I can edit my profile, create, search and vote aha! Moments
-
-**Logout** - As a user I want to be able to log out from the webpage so that I can make sure no one will access my account
-​
-**Events list** - As a user I want to see all the events available so that I can choose which ones I want to attend
-​
-**Events create** - As a user I want to create an event so that I can invite others to attend
-​
-**Events detail** - As a user I want to see the event details and attendee list of one event so that I can decide if I want to attend
-​
-**Attend event** - As a user I want to be able to attend to event so that the organizers can count me in
-​
+- **404** I can see a 404 page, and know that it is my fault when I try to access a page that does not exist.
+- **500** I can see a 500 page and I know it's not my fault, because there is an internal server error​.
+- **Homepage** I can see a list of quotes, I also have access to log in and register
+- **Sign up** As a user, I want to register on the website to create my profile and be able to participate in aha! moment.
+- **Login** As a user, I want to be able to login edit my profile, create, search and vote Aha! Moments.
+- **Logout** As a user I want to be able to log out from the webpage so that I can make sure no one will access my account.
+- **Profile** As a user I can see and update my profile.
+- **Events list** As a user I want to see all the events available so that I can choose which ones I want to attend
+- **Events create** As a user I want to create an event so that I can invite others to attend
+- **Events detail** As a user I want to see the event details and attendee list of one event so that I can decide if I want to attend
+- **Attend event** As a user, I want to be able to attend the event so that the organizers can count on me.
+-**Filter quotes** As a user, I want to filter appointments by name and location.
 
 ## Backlog
 
-​
-List of other features outside of the MVPs scope
-​
-User profile: - see my profile - upload my profile picture - see other users profile - list of events created by the user - list events the user is attending
+**​User profile**
+- Upload my profile picture.
+- See other users profile.
+- Chat with other users.
+- I want to create an event in order to invite others to atten,  see the details of the event and the list of attendees of event. 
+- vote speaker quotes and determine the most popular speakers​
 
-The option to vote speaker quotes and determine the most popular speakers​
-
-Geo Location: show all events in a map in the event list page
+**Geo Location**
+- show all events in a map in the event list page.
 ​​
 
 ## Routes
+### auth
+<!-- |Method|Route|Functionality|
+|---|---|---|
+|GET|api/auth/me|Check session status|
+|POST|api/auth/signup|Log in user to app and set user to session (Body: username, email, password)|
+|POST|api/auth/login|Register user to app and set user to session (Body: username, mail, password)|
+|POST|api/auth/logout|Log out user from app and remove session|
+
 
 ​
 List routes backend
+
+POST/quote ---create quote
+GET/quote ---list quote
+PUT/quote/:id ----update quote
+DELETE/quote/:id ----delete quote
+
+List routes frontend
+
+/quote list
+/quote/:id detail
+/quote/:id/update update
+/quote/:id/delete delete -->
+
 ​
 
 ## Models
 
-​
 User model
-​
-{
-username: String
-password: String
-category: String
-occupation: String
-}
-​
+
+```json
+ username: { type: String, required: true, unique: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true, unique: true },
+  category: { type: String, required: true },
+  ocupation: { type: String, required: true }
+```
+
 Event model
-​
-{
-title: String
-owner: ObjectId<User>
-name: String
-description: String
-date: Date
-location: String
-}
+
+```json
+ title: { type: String, required: true, unique: true },
+  description: { type: ObjectId, ref: "User"},
+  owner: { type: ObjectId, ref: "User"},
+  date: { type: Date, required: true },
+  location: { type: String, required: true }
+``
 
 Quote model
-​
-{
-text: String
-owner: ObjectId<User>
-theme: String
-}
-​
+​```json
+ text: { type: String, required: true, unique: true },
+  owner: { type: ObjecId, ref: "User", unique: true },
+ theme: { type: String, required: true }
+``
 
 ## Links
 
