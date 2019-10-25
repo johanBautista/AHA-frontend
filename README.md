@@ -67,7 +67,7 @@ List routes frontend
 
 User model
 
-```json
+```
  username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true, unique: true },
@@ -77,20 +77,21 @@ User model
 
 Event model
 
-```json
+```
  title: { type: String, required: true, unique: true },
   description: { type: ObjectId, ref: "User"},
   owner: { type: ObjectId, ref: "User"},
   date: { type: Date, required: true },
   location: { type: String, required: true }
-``
+```
 
 Quote model
-​```json
+​```
  text: { type: String, required: true, unique: true },
   owner: { type: ObjecId, ref: "User", unique: true },
  theme: { type: String, required: true }
-``
+```
+
 
 ## Links
 
