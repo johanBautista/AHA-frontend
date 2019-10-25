@@ -90,8 +90,7 @@ Quote model
  text: { type: String, required: true, unique: true },
   owner: { type: ObjecId, ref: "User", unique: true },
  theme: { type: String, required: true }
-```
-
+``
 
 ## Links
 
@@ -114,3 +113,6 @@ The url to your repository and to your deployed project
 ​
 [Slides Link](http://slides.com/)
 Contrae
+
+
+
