@@ -1,15 +1,29 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 import { withAuth } from './Context/AuthContext';
+import jumbotron from "./abril14.jpg";
+import "./index.css";
 
-const Navbar = () => {
+const Home = () => {
   return (
-    <nav className="nav-style">
-      <a href="/login">login</a>
+    <div>
+      <h1>HOMEPAGE</h1>
+      <p>Jumbotron</p>
+      <div className="jumbotron">
+        <img src={jumbotron} alt="jumbotron" />
+      </div>
+
+      <p>links de login/signup</p>
+      <a href="/login" className="btn">
+        login
+      </a>
       <br />
-      <a href="/signup">signup</a>
-    </nav>
+      <a href="/signup" className="btn">
+        signup
+      </a>
+      <p>cards de quotes y events</p>
+    </div>
   );
 };
 
-export default withAuth(Navbar);
+export default withAuth(Home);

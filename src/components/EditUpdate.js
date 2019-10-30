@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 // import List from './QuoteList';
 
 // 1. crear constructor con los state de term e items
-class Form extends Component {
+class Edit extends Component {
   state = {
-    text: '',
-    date: '',
-    location: '',
-    theme: '',
+    username: '',
+    email: '',
+    password: '',
+    category: '',
+    ocupation:'',
   };
 
   // 2. crear onChange y onSubmit
@@ -25,31 +26,36 @@ class Form extends Component {
   // };
 
   render() {
-    const { text, date, location, theme } = this.setState;
+    const { username, email, password, category, ocupation } = this.setState;
     return (
       <div>
-        <h3>Formulario x Quote</h3>
         <form className="App" onSubmit={this.onSubmit}>
-          <label>Text:</label>
+        <h3>Formulario x Edit perfil</h3>
+
+          <label>Username:</label>
           <br />
-          <input type="text" name="text" value={text} onChange={this.handleChange} placeholder="text" />
+          <input type="text" name="username" value={username} onChange={this.handleChange} placeholder="username" />
           <br />
 
-          <label>Date:</label>
+          <label>Email:</label>
           <br />
-          <input type="date" name="date" value={date} onChange={this.handleChange} placeholder="date" />
-          <br />
-
-          <label>Location:</label>
-          <br />
-          <input type="text" name="location" value={location} onChange={this.handleChange} placeholder="location" />
+          <input type="date" name="email" value={email} onChange={this.handleChange} placeholder="email" />
           <br />
 
-          <label>Theme:</label>
+          <label>Password:</label>
           <br />
-          <input type="text" name="theme" value={theme} onChange={this.handleChange} placeholder="theme" />
+          <input type="text" name="password" value={password} onChange={this.handleChange} placeholder="password" />
           <br />
 
+          <label>Category:</label>
+          <br />
+          <input type="text" name="category" value={category} onChange={this.handleChange} placeholder="category" />
+          <br />
+
+          <label>Ocupation:</label>
+          <br />
+          <input type="text" name="ocupation" value={ocupation} onChange={this.handleChange} placeholder="ocupation" />
+          <br />
           {/* <label>term</label>
           <input type="text" name="term"value={this.state.term} onChange={this.onChange} />
           <label>title</label>
@@ -62,4 +68,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default Edit;
