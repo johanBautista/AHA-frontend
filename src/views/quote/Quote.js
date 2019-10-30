@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withAuth } from '../../Context/AuthContext';
 
 class Quote extends Component {
   state = {
@@ -8,7 +9,22 @@ class Quote extends Component {
     theme: '',
   };
 
-  
+  handleChange = event => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
+
+  // handleFormSubmit = e => {
+  //   e.preventDefault();
+  //   const { text, date, location, theme } = this.state;
+  //   this.props.handleLogin({
+  //     text,
+  //     date,
+  //     location,
+  //     theme,
+  //   });
+  // };
+
   render() {
     const { text, date, location, theme } = this.setState;
 
@@ -43,4 +59,4 @@ class Quote extends Component {
   }
 }
 
-export default Quote;
+export default withAuth(Quote);
