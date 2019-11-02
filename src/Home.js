@@ -4,12 +4,10 @@ import jumbotron from './abril14.jpg';
 import './index.css';
 import QuoteCard from './views/QuoteCard';
 
-
 const Home = () => {
   return (
     <div>
       <h1>HOMEPAGE</h1>
-      {/* aqui quiero poner un link que me envie a homepage  pero no puedo poner un link */}
       <p>Jumbotron</p>
       <div className="jumbotron">
         <img src={jumbotron} alt="jumbotron" />

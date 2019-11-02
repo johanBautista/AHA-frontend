@@ -22,7 +22,6 @@ class QuoteNew extends Component {
   // lo q tengo q subir
   handleFormSubmit = event => {
     event.preventDefault();
-    // this.setState({owner:this.props.user._id})
     quoteService.createQuotes(this.state);
     this.setState({
       text: '',

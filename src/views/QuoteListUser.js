@@ -12,7 +12,6 @@ class QuoteListUser extends Component {
     try {
       console.log(this.props.user._id)
       const quotes = await quoteService.getAllQuotesUser(this.props.user._id);
-      // console.log(quotes);
       this.setState({
         quotes,
       });
@@ -22,13 +21,12 @@ class QuoteListUser extends Component {
   }
 
   render() {
-    const { quotes } = this.state; // loading
-    // console.log(this.props.user)
+    const { quotes } = this.state; 
     return (
       <div>
         <h3>Estamos en Quote List user kbron</h3>
         
-        {quotes.map(quote => { // loading && quotes.map 
+        {quotes.map(quote => { 
           return (
             <div key={quote._id}>
               <p>{quote.text}</p>
