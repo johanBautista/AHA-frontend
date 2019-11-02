@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 
 import AuthProvider from './Context/AuthContext';
 import App from './App';
-import Home from './Home';
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<AuthProvider>
-  <Home />
   <App />
 </AuthProvider>, document.getElementById('root'));
 

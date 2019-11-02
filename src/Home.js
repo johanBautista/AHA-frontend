@@ -1,8 +1,9 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-import { withAuth } from './Context/AuthContext';
+import { Link } from 'react-router-dom';
 import jumbotron from './abril14.jpg';
 import './index.css';
+import QuoteCard from './views/QuoteCard';
+
 
 const Home = () => {
   return (
@@ -15,16 +16,18 @@ const Home = () => {
       </div>
 
       <p>links de login/signup</p>
-      <a href="/login" className="btn">
-        login
-      </a>
-      <br />
-      <a href="/signup" className="btn">
-        signup
-      </a>
+      <Link to={'/login'} className="btn">
+        Login
+      </Link>
+      <Link to={'/signup'} className="btn">
+        Signup
+      </Link>
+
       <p>cards de quotes y events</p>
+
+      <QuoteCard />
     </div>
   );
 };
 
-export default withAuth(Home);
+export default Home;

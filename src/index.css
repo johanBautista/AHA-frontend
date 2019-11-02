@@ -17,7 +17,7 @@ code {
   padding: 0;
 }
 .btn {
-  background-color: rgba(12, 77, 117, 0.55);
+  background-color: rgba(58, 136, 64, 0.55);
   color: azure;
   text-decoration-line: none;
   border-radius: 5px;
@@ -27,4 +27,18 @@ code {
 ::placeholder {
   background-color: rgba(165, 42, 42, 0.192);
   color: brown;
+}
+
+/* QuoteCard  */
+
+.style-card {
+  background-color: rgba(14, 104, 100, 0.173);
+  padding: 5px;
+  margin: 5px;
+  color: rgb(9, 75, 72);;
+}
+
+.style-car-info p {
+  display: flex;
+  justify-content: space-around;
 }

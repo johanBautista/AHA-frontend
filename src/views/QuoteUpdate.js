@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { withAuth } from '../../Context/AuthContext';
+import { withAuth } from '../Context/AuthContext';
 
-class Quote extends Component {
+class QuoteUpdate extends Component {
   state = {
     text: '',
     date: '',
@@ -14,23 +14,18 @@ class Quote extends Component {
     this.setState({ [name]: value });
   };
 
-  // handleFormSubmit = e => {
-  //   e.preventDefault();
-  //   const { text, date, location, theme } = this.state;
-  //   this.props.handleLogin({
-  //     text,
-  //     date,
-  //     location,
-  //     theme,
-  //   });
-  // };
+  handleFormSubmit = e => {
+    e.preventDefault();
+    const { text, date, location, theme } = this.state;
+    
+  };
 
   render() {
     const { text, date, location, theme } = this.setState;
 
     return (
       <div>
-        <h2>formulario quote</h2>
+        <h2>formulario quote sin red</h2>
         <form className="Form" onSubmit={this.handleFormSubmit}>
           <label>Text:</label>
           <br />
@@ -59,4 +54,4 @@ class Quote extends Component {
   }
 }
 
-export default withAuth(Quote);
+export default withAuth(QuoteUpdate);
