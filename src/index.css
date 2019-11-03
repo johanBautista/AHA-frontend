@@ -28,7 +28,7 @@ h2 {
 }
 
 /* css  homepage y btn general */
-b{
+b {
   color: #ceb148;
   text-decoration-line: none;
 }
@@ -65,6 +65,18 @@ b{
 }
 
 /* CSS GENERAL  */
+.role-img-detail {
+  background-image: url('./logo-detail.png');
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* opacity: 0.3; */
+}
+.role-img-detail img {
+  opacity: 0.3;
+}
 
 .btn {
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
@@ -75,7 +87,7 @@ b{
   text-align: center;
   font-size: 1.2em;
   font-weight: 500;
-  margin: .5em;
+  margin: 0.5em;
   padding: 15px;
   /* min-width: 85%; */
   background: rgba(0, 0, 0, 0);
@@ -132,7 +144,7 @@ input[type='password'] {
 }
 [type='text']:focus {
   outline: none;
-  border-color: #ceb148;
+  border-color: #e9bb17;
 }
 [type='email']:focus {
   outline: none;
@@ -151,6 +163,12 @@ input[type='password'] {
   margin: 15px;
   color: rgb(75, 9, 9);
   box-shadow: 2px 2px 2px 2px #88888880;
+  font-size: 1.5em;
+}
+.style-card-detail {
+  padding: 5px;
+  margin: 10% 5%;
+  box-shadow: 1px 1px 1px 2px #88888880;
   font-size: 1.5em;
 }
 .info {

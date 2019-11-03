@@ -24,11 +24,9 @@ class QuoteListUser extends Component {
     const { quotes } = this.state; 
     return (
       <div>
-        <h3>Estamos en Quote List user kbron</h3>
-        
         {quotes.map(quote => { 
           return (
-            <div key={quote._id}>
+            <div key={quote._id} className="style-card">
               <p>{quote.text}</p>
               <p>{quote.date}</p>
               <p>{quote.location}</p>
