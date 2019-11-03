@@ -25,13 +25,15 @@ class QuoteCard extends Component {
     const { quotes } = this.state;
     return (
       <div>
-        <h3>Estamos en Quote List fdfdfdf </h3>
+        <div className="intro-text">
+        <h2> If you can dream it can be done</h2>
+        </div>
 
         {quotes.map(quote => {
           return (
             <div key={quote._id} className="style-card">
               {/* <Link to={`/quotes/${quote._id}`}>{quote.text} </Link> */}
-              <QuoteCards quote={quote}/>
+              <QuoteCards quote={quote} className="info" />
             </div>
           );
         })}

@@ -19,13 +19,11 @@ import QuoteDetail from './views/QuoteDetail';
 import QuoteUpdate from './views/QuoteUpdate';
 
 class App extends Component {
+  // eslint-disable-next-line class-methods-use-this
   render() {
-    const { handleLogout } = this.props;
+    // const { handleLogout } = this.props;
     return (
       <>
-        <button onClick={handleLogout} className="btn">
-          logout
-        </button>
         <Router>
           <AnonRoute exact path="/" component={Home} />
           {/* <AnonRoute exact path="/quotes" component={QuoteCard} /> */}
@@ -40,6 +38,9 @@ class App extends Component {
           <AnonRoute exact path="/signup" component={Signup} />
           <PrivateRoute exact path="/private" component={PrivateView} />
         </Router>
+        {/* <button onClick={handleLogout} className="btn">
+          logout 1
+        </button> */}
       </>
     );
   }
