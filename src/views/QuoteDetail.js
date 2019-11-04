@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../index.css';
 import quoteService from '../services/quoteService';
-import logo from '../logo.png';
+// import logo from '../logo.png';
 
 class QuoteCard extends Component {
   state = {

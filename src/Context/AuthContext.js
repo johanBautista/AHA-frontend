@@ -4,7 +4,7 @@ import authService from '../services/authService';
 
 const AuthContext = createContext();
 
-const Provider = AuthContext.Provider;
+const {Provider} = AuthContext;
 
 const AuthConsumer = AuthContext.Consumer;
 

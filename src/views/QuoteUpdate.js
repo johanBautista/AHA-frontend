@@ -16,7 +16,7 @@ class QuoteUpdate extends Component {
 
   handleFormSubmit = e => {
     e.preventDefault();
-    const { text, date, location, theme } = this.state;
+    // const { text, date, location, theme } = this.state;
     
   };
 

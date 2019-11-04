@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import logo2 from '../../logo2.png';
+import { withAuth } from '../../Context/AuthContext';
 
-// import { withAuth } from '../../Context/AuthContext';
+import logo2 from '../../logo2.png';
 
 class Signup extends Component {
   state = {
@@ -15,14 +16,14 @@ class Signup extends Component {
     this.setState({ [name]: value });
   };
 
-  // handleFormSubmit = e => {
-  //   e.preventDefault();
-  //   const { username, password } = this.state;
-  //   this.props.handleSignup({
-  //     username,
-  //     password,
-  //   });
-  // };
+  handleFormSubmit = e => {
+    e.preventDefault();
+    const { username, password } = this.state;
+    this.props.handleSignup({
+      username,
+      password,
+    });
+  };
 
   render() {
     const { username, password } = this.state;
@@ -40,27 +41,20 @@ class Signup extends Component {
           <input type="password" name="password" value={password} onChange={this.handleChange} placeholder="password" />
           <input type="submit" value="SIGNUP" className="connect-btn" />
         </form>
-
-        <p>
-          Already have account?
-          <div className="connect-login">
+        <p>Already have account? </p>
+        <div className="connect-login">
           <Link to={'/login'}>
-            
             <b>Login</b>
           </Link>
-          </div>
-        </p>
+        </div>
       </div>
     );
   }
 }
 
-// export default withAuth(Signup);
-export default Signup;
+export default withAuth(Signup);
 
-
-
-// prueba de momento 
+// prueba de momento
 
 // import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
@@ -72,7 +66,7 @@ export default Signup;
 //     password: "",
 //   };
 
-//   handleChange = (event) => {  
+//   handleChange = (event) => {
 //     const {name, value} = event.target;
 //     this.setState({[name]: value});
 //   }
@@ -85,7 +79,7 @@ export default Signup;
 //     //   password,
 //     // });
 //   };
-  
+
 //   render() {
 //     const { username, password } = this.state;
 //     return (
@@ -98,7 +92,7 @@ export default Signup;
 //           <input type="submit" value="Signup" />
 //         </form>
 
-//         <p>Already have account? 
+//         <p>Already have account?
 //           <Link to={"/login"}> Login</Link>
 //         </p>
 

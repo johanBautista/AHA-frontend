@@ -1,13 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { withAuth } from '../Context/AuthContext';
+
 import QuoteNew from './QuoteNew';
 import QuoteListUser from './QuoteListUser';
-
-// import Form from '../components/QuoteCreate';
-// import Edit from '../components/EditUpdate';
-// import Quote from './QuoteUpdate';
-// import QuoteList from './QuoteList';
 
 const PrivateView = ({ user, handleLogout }) => {
   return (
