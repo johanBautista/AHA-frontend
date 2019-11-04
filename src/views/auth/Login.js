@@ -15,7 +15,7 @@ class Login extends Component {
     this.setState({ [name]: value });
   };
 
-  handleFormSubmit = e => {
+  handleFormSubmit = (e) => {
     e.preventDefault();
     const { username, password } = this.state;
     this.props.handleLogin({
@@ -38,7 +38,7 @@ class Login extends Component {
           <br />
           {/* <label>Password:</label> */}
           <input type="password" name="password" value={password} onChange={this.handleChange} placeholder="password" />
-          <input type="submit" value="LOGIN" className="btn" />
+          <input type="submit" value="LOGIN" className="connect-btn" />
         </form>
       </div>
     );

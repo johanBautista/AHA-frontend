@@ -28,10 +28,6 @@ h2 {
 }
 
 /* css  homepage y btn general */
-b {
-  color: #ceb148;
-  text-decoration-line: none;
-}
 
 /* HOME  */
 .home-jumbotron img {
@@ -100,6 +96,41 @@ b {
   background: #ceb148;
   color: azure !important;
 }
+.connect-login a {
+  text-decoration-line: none;
+  /* text-decoration: none; */
+  display: inline;
+  color: #235789;
+}
+.connect-login {
+  /* text-decoration-line: none; */
+  display: inline;
+  /* text-decoration: none; */
+  color: red;
+}
+.connect-btn {
+  color: #235789;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 15px;
+  border: 0;
+  border: 1px solid #235789;
+  border-radius: 10px;
+  width: 90%;
+  font-size: 1.1em;
+}
+.btn2 {
+  color: azure;
+  background-color: rgba(180, 41, 41, 0.541);
+  padding: 5px;
+  border-radius: 9px;
+}
+.btn3 {
+  color: azure;
+  background-color: rgba(41, 101, 180, 0.541);
+  padding: 5px 12px;
+  border-radius: 9px;
+}
 
 /* FORMULARIOS  */
 
@@ -108,8 +139,8 @@ form {
 }
 
 input[type='date'] {
-  margin: 0 auto;
-  width: 80%;
+  margin: 20px;
+  padding: 5px 20%;
   height: 45px;
   line-height: 45px;
   font-size: 1em;
@@ -180,7 +211,16 @@ input[type='password'] {
   text-decoration-line: none;
 }
 
-.style-car-info p {
+.style-car-info {
+  color: #235789;
+}
+.style-card-info {
+  font-size: small;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+.section-boton {
   display: flex;
   justify-content: space-around;
 }

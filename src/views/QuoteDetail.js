@@ -34,7 +34,10 @@ class QuoteCard extends Component {
             <p>{quote.location}</p>
             <p>{quote.theme}</p>
           </div>
-          <button className="btn">Me Gusta</button>
+          <div className="section-boton">
+            <button className="btn2">DISLIKE</button>
+            <button className="btn3">LIKE</button>
+          </div>
         </div>
       </div>
     );

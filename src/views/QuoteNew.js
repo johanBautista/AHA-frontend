@@ -57,7 +57,7 @@ class QuoteNew extends Component {
           <input type="text" name="theme" value={this.state.theme} onChange={this.handleChange} placeholder="theme" />
           <input type="date" name="date" value={this.state.date} onChange={this.handleChange} />
 
-          <input type="submit" value="ADD NEW" className="btn" />
+          <input type="submit" value="ADD NEW" className="connect-btn" />
         </form>
       </div>
     );

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withAuth } from '../Context/AuthContext';
-import { Link } from 'react-router-dom';
 import quoteService from '../services/quoteService';
 
 class QuoteListUser extends Component {
@@ -10,7 +9,7 @@ class QuoteListUser extends Component {
 
   async componentDidMount() {
     try {
-      console.log(this.props.user._id)
+      console.log(this.props.user._id);
       const quotes = await quoteService.getAllQuotesUser(this.props.user._id);
       this.setState({
         quotes,
@@ -21,17 +20,22 @@ class QuoteListUser extends Component {
   }
 
   render() {
-    const { quotes } = this.state; 
+    const { quotes } = this.state;
     return (
       <div>
-        {quotes.map(quote => { 
+        {quotes.map(quote => {
           return (
-            <div key={quote._id} className="style-card">
+            <div key={quote._id} className="style-card-detail">
               <p>{quote.text}</p>
-              <p>{quote.date}</p>
-              <p>{quote.location}</p>
-              <p>{quote.theme}</p>
-              <Link to={`/quotes/${quote._id}`}>{quote.text} </Link>
+              <div className="style-card-info">
+                <p>{quote.date}</p>
+                <p>{quote.location}</p>
+                <p>{quote.theme}</p>
+              </div>
+              <div className="section-boton">
+                <button className="btn2">DELETE</button>
+                <button className="btn3">EDIT</button>
+              </div>
             </div>
           );
         })}
@@ -40,4 +44,4 @@ class QuoteListUser extends Component {
   }
 }
 
-export default withAuth( QuoteListUser);
+export default withAuth(QuoteListUser);
