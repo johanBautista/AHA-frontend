@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import '../index.css';
 import quoteService from '../services/quoteService';
-import { userInfo } from 'os';
-// import logo from '../logo.png';
 
 class QuoteCard extends Component {
   state = {
@@ -21,14 +21,15 @@ class QuoteCard extends Component {
     }
   }
 
- 
   render() {
     const { quote } = this.state;
 
     return (
       <div className="role-img-detail">
-        <div className="home-features">
-          <span>aha! Moment</span>
+        <div className="home-features-detail connect-login">
+          <Link to={'/'}>
+            <span>aha! Moment</span>
+          </Link>
         </div>
 
         <div className="style-card-detail">
@@ -39,7 +40,7 @@ class QuoteCard extends Component {
             <p>{quote.theme}</p>
           </div>
           <div className="section-boton">
-            {/* <i>{quote.owner}</i>        pasar el nombre del creador de la cita al quotedetail de home          */} 
+            {/* <i>{quote.owner}</i>        pasar el nombre del creador de la cita al quotedetail de home          */}
             <button className="btn2">DISLIKE</button>
             <button className="btn3">LIKE</button>
           </div>
