@@ -13,6 +13,7 @@ button {
   font-family: 'Raleway', sans-serif;
   color: #373737;
 }
+
 body {
   margin: 5px;
   padding: 0;
@@ -61,6 +62,7 @@ h2 {
 }
 
 /* CSS GENERAL  */
+
 .role-img-detail {
   background-image: url('./logo-detail.png');
   height: 500px;
@@ -68,7 +70,6 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  /* opacity: 0.3; */
 }
 .role-img-detail img {
   opacity: 0.3;
@@ -98,16 +99,10 @@ h2 {
 }
 .connect-login a {
   text-decoration-line: none;
-  /* text-decoration: none; */
   display: inline;
   color: #235789;
 }
-.connect-login {
-  /* text-decoration-line: none; */
-  display: inline;
-  /* text-decoration: none; */
-  color: red;
-}
+
 .connect-btn {
   color: #235789;
   background-color: #f7f7f7;
@@ -130,6 +125,29 @@ h2 {
   background-color: rgba(41, 101, 180, 0.541);
   padding: 5px 12px;
   border-radius: 9px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+.btn4 {
+  color: #235789;
+  background-color: #f7f7f7;
+  border: 0;
+  border-bottom: 1px solid gray;
+  border-right: 1px solid gray;
+  padding: 5px 12px;
+}
+.btn5 {
+  color: #892323;
+  background-color: #f7f7f7;
+  border: 0;
+  border-bottom: 1px solid gray;
+  border-right: 1px solid gray;
+  padding: 5px 12px;
 }
 
 /* FORMULARIOS  */
@@ -224,3 +242,9 @@ input[type='password'] {
   display: flex;
   justify-content: space-around;
 }
+i {
+  font-family: 'Raleway', sans-serif;
+  color: #373737;
+}
+
+/* Quote New  */

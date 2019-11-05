@@ -21,6 +21,7 @@ class QuoteCard extends Component {
 
   render() {
     const { quote } = this.state;
+
     return (
       <div className="role-img-detail">
         <div className="home-features">
@@ -35,6 +36,7 @@ class QuoteCard extends Component {
             <p>{quote.theme}</p>
           </div>
           <div className="section-boton">
+            {/* <i>{quote.owner}</i> */}
             <button className="btn2">DISLIKE</button>
             <button className="btn3">LIKE</button>
           </div>

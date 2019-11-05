@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import '../index.css';
 import quoteService from '../services/quoteService';
 import QuoteCards from './QuoteCards';
@@ -32,7 +31,6 @@ class QuoteCard extends Component {
         {quotes.map(quote => {
           return (
             <div key={quote._id} className="style-card">
-              {/* <Link to={`/quotes/${quote._id}`}>{quote.text} </Link> */}
               <QuoteCards quote={quote} className="info" />
             </div>
           );
