@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import quoteService from '../services/quoteService';
 import { withAuth } from '../Context/AuthContext';
-import '../index.css'
-import logo from '../logo.png';
-
+import '../index.css';
 
 class QuoteNew extends Component {
   state = {
@@ -38,10 +36,6 @@ class QuoteNew extends Component {
   render() {
     return (
       <div className="create-quote">
-        <div className="home-features">
-          <img src={logo} alt="" className="role-img-home"/>
-          <span>aha! Moment</span>
-        </div>
         <p>Create Quote</p>
 
         <form onSubmit={this.handleFormSubmit}>

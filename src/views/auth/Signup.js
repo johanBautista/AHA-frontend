@@ -30,7 +30,9 @@ class Signup extends Component {
     return (
       <div>
         <div className="home-features">
-          <img className="role-img-home" src={logo2} alt="uno" />
+          <Link to={'/'}>
+            <img className="role-img-login" src={logo2} alt="uno" />
+          </Link>
           <span>I have a idea...</span>
         </div>
         <form onSubmit={this.handleFormSubmit}>

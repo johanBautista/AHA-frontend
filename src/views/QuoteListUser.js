@@ -19,6 +19,14 @@ class QuoteListUser extends Component {
     }
   }
 
+
+  // borrar quote
+  // deleteCurrentQuote = (quote) => {
+  //   const { currentQuote } = this.state;
+  //   const rest = currentQuote.filter(i => i.text !== quote.text);
+  //   this.setState({currentQuote: rest});
+  // }
+  
   render() {
     const { quotes } = this.state;
     return (
@@ -33,7 +41,7 @@ class QuoteListUser extends Component {
                 <p>{quote.theme}</p>
               </div>
               <div className="section-boton">
-                <button className="btn2">DELETE</button>
+                <button className="btn2">DELETE</button> {/** onClick={() => deleteCurrentQuote(quote)} * */}
                 <button className="btn3">EDIT</button>
               </div>
             </div>

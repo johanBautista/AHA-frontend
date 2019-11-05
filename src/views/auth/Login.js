@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { withAuth } from '../../Context/AuthContext';
 import logo2 from '../../logo2.png';
 
@@ -15,7 +16,7 @@ class Login extends Component {
     this.setState({ [name]: value });
   };
 
-  handleFormSubmit = (e) => {
+  handleFormSubmit = e => {
     e.preventDefault();
     const { username, password } = this.state;
     this.props.handleLogin({
@@ -28,8 +29,10 @@ class Login extends Component {
     const { username, password } = this.state;
     return (
       <div>
-         <div className="home-features">
-          <img className="role-img-home" src={logo2} alt="uno" />
+        <div className="home-features">
+          <Link to={'/'}>
+            <img className="role-img-login" src={logo2} alt="uno" />
+          </Link>
           <span>I have a idea...</span>
         </div>
         <form className="form-style" onSubmit={this.handleFormSubmit}>

@@ -12,9 +12,8 @@ import './index.css';
 
 import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
-// import Quote from './views/quote/Quote';
+// import Home2 from './Home2';
 
-// import QuoteCard from './views/QuoteList';
 import QuoteList from './views/QuoteList';
 import QuoteNew from './views/QuoteNew';
 import QuoteDetail from './views/QuoteDetail';
@@ -30,6 +29,8 @@ class App extends Component {
           <AnonRoute exact path="/signup" component={Signup} />
           <AnonRoute exact path="/quotes/:id" component={QuoteDetail} />
           <AnonRoute exact path="/login" component={Login} />
+
+          {/*   PREGUNTAR A THOR      <PrivateRoute exact path="/" component={Home2} />              PREGUNTAR A THOR    */}
           <PrivateRoute exact path="/private" component={PrivateView} />
           <PrivateRoute exact path="/quotes" component={QuoteList} />
           <PrivateRoute exact path="/quotes/update" component={QuoteUpdate} />
