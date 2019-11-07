@@ -21,15 +21,6 @@ class QuoteListUser extends Component {
     }
   }
 
-  
-
-  // borrar quote
-  // deleteCurrentQuote = quote => {
-  //   const { currentQuote } = this.state;
-  //   const rest = currentQuote.filter(i => i.text !== quote.text);
-  //   this.setState({ currentQuote: rest });
-  // };
-
   render() {
     const { quotes } = this.state;
     return (

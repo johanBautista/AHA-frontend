@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withAuth } from '../Context/AuthContext';
+// import { withAuth } from '../Context/AuthContext';
 import quoteService from '../services/quoteService';
 
 class QuoteUpdate extends Component {
@@ -57,7 +57,7 @@ class QuoteUpdate extends Component {
       })
       .catch(() => {});
   };
-
+  
   render() {
     // const { text, date, location, theme } = this.state.quote;
     console.log(this.state.quote);

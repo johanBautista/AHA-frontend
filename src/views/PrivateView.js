@@ -6,6 +6,9 @@ import logo from '../logo.png';
 import QuoteNew from './QuoteNew';
 import QuoteListUser from './QuoteListUser';
 
+// 1. crear clase con su estado, pasar el componente QuoteNew a private y buscar la forma de que cuando se ree una quote se repinte toda la vista
+// 2. la forma de comunicar los dos hermanos sea por medio del padre, en esta caso por medio del contexto
+
 const PrivateView = ({ user, handleLogout }) => {
   // console.log('PROPS PRIVATE VIEW: ', this.props);
   return (
