@@ -33,6 +33,7 @@ class QuoteNew extends Component {
     });
   };
 
+
   render() {
     return (
       <div className="create-quote">

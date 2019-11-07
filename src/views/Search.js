@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import quoteService from '../services/quoteService';
+import logo from '../logo.png';
 
 class QuoteList extends Component {
   state = {
     quotes: [],
+    // user:''
   };
 
   async componentDidMount() {
@@ -14,7 +16,7 @@ class QuoteList extends Component {
         quotes,
       });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   }
 
@@ -22,16 +24,19 @@ class QuoteList extends Component {
     const { quotes } = this.state; // loading
     return (
       <div>
-        <h3>Estamos en Quote List kbron</h3>
+        <div className="home-features">
+          <Link to={'/'}>
+            <img className="role-img-home" src={logo} alt="dos" />
+          </Link>
+        </div>
 
+        <div className="intro-text">
+          <h2>Search Quotes </h2>
+        </div>
         {quotes.map(quote => {
           return (
-            <div key={quote._id}>
-              <p>{quote.text}</p>
-              <p>{quote.date}</p>
-              <p>{quote.location}</p>
-              <p>{quote.theme}</p>
-              <Link to={`/quotes/${quote._id}`}>{quote.text} </Link>
+            <div key={quote._id} className="style-card">
+              <Link to={`/quotes/${quote._id}`} className=''>{quote.text} </Link>
             </div>
           );
         })}

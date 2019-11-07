@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { withAuth } from '../Context/AuthContext';
 import quoteService from '../services/quoteService';
 
@@ -9,8 +10,9 @@ class QuoteListUser extends Component {
 
   async componentDidMount() {
     try {
-      console.log(this.props.user._id);
+      // console.log(this.props.user._id);
       const quotes = await quoteService.getAllQuotesUser(this.props.user._id);
+      // console.log(quotes);
       this.setState({
         quotes,
       });
@@ -19,14 +21,13 @@ class QuoteListUser extends Component {
     }
   }
 
-
   // borrar quote
-  // deleteCurrentQuote = (quote) => {
+  // deleteCurrentQuote = quote => {
   //   const { currentQuote } = this.state;
   //   const rest = currentQuote.filter(i => i.text !== quote.text);
-  //   this.setState({currentQuote: rest});
-  // }
-  
+  //   this.setState({ currentQuote: rest });
+  // };
+
   render() {
     const { quotes } = this.state;
     return (
@@ -41,8 +42,12 @@ class QuoteListUser extends Component {
                 <p>{quote.theme}</p>
               </div>
               <div className="section-boton">
-                <button className="btn2">DELETE</button> {/** onClick={() => deleteCurrentQuote(quote)} * */}
-                <button className="btn3">EDIT</button>
+              {/* <button onClick={() => deleteFood(item)}>borrar</button> */}
+
+                {/* <button onClick={() => deleteCurrentQuote(quote)} className="btn5">DELETE</button>  */}
+                {/* * onClick={() => deleteCurrentQuote(quote)} * */}
+                {/* <button className="btn3">EDIT</button> */}
+                <Link to={'/quotes/edit/:id'} className="btn5">editar</Link>
               </div>
             </div>
           );

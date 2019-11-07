@@ -1,32 +1,62 @@
 import React, { Component } from 'react';
 import { withAuth } from '../Context/AuthContext';
+import quoteService from '../services/quoteService';
 
 class QuoteUpdate extends Component {
   state = {
-    text: '',
-    date: '',
-    location: '',
-    theme: '',
+    quote: [],
   };
 
-  handleChange = event => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
+  async componentDidMount() {
+    // const { id }  = this.props;
+    try {
+      const quote = await quoteService.getQuotesById();
+      this.setState({
+        quote,
+        loading: false,
+      });
+    } catch (error) {
+      // console.log(error);
+      this.setState({ loading: false });
+    }
+  }
+
+  handleChange = e => {
+    const { quote } = this.state;
+    this.setState({
+      quote: {
+        ...quote,
+        [e.target.name]: e.target.value,
+      },
+    });
   };
 
-  handleFormSubmit = e => {
+  handleSubmit = e => {
     e.preventDefault();
-    // const { text, date, location, theme } = this.state;
-    
+    const { quote } = this.state;
+    const {
+      history: { push },
+    } = this.props;
+    console.log(quote);
+    quoteService
+      .updatequote(quote)
+      .then(() => {
+        this.setState({
+          message: 'quote updated',
+        });
+        push(`/quotes/${quote._id}`);
+      })
+      .catch(() => {});
   };
 
   render() {
     const { text, date, location, theme } = this.setState;
+    // const { quote: { text, date, location, theme  }} = this.state;
 
     return (
       <div>
-        <h2>formulario quote sin red</h2>
-        <form className="Form" onSubmit={this.handleFormSubmit}>
+        <h2>Editar Quote</h2>
+        <form onSubmit={this.handleFormSubmit} className="Form">
           <label>Text:</label>
           <br />
           <input type="text" name="text" value={text} onChange={this.handleChange} placeholder="text" />
@@ -47,7 +77,8 @@ class QuoteUpdate extends Component {
           <input type="text" name="theme" value={theme} onChange={this.handleChange} placeholder="theme" />
           <br />
 
-          <input type="submit" value="Submit" className="btn" />
+          <input type="submit" value="update" className="btn" />
+          {/* <button className="btn">DELETE</button>  */}
         </form>
       </div>
     );

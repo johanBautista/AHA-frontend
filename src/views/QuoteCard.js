@@ -11,12 +11,12 @@ class QuoteCard extends Component {
   async componentDidMount() {
     try {
       const quotes = await quoteService.getAllQuotes();
-      console.log(quotes);
+      // console.log(quotes);
       this.setState({
         quotes,
       });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   }
 

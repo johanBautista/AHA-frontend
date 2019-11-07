@@ -1,40 +1,45 @@
 import axios from 'axios';
 
 class QuoteService {
-  constructor(){
+  constructor() {
     this.axios = axios.create({
-      baseURL:'http://localhost:3001/api', 
-      withCredentials: true 
+      baseURL: 'http://localhost:3001/api',
+      withCredentials: true,
     });
   }
 
-  async getAllQuotes() {
-    const { data: quotes } = await this.axios.get('/quotes');
-    return quotes;
+  // mostrar todas las quotes en homepage
+  getAllQuotes() {
+    return this.axios.get('/quotes').then(({ data: quotes }) => quotes);
   }
 
-  async getAllQuotesUser(id) {
-    const { data: quotes } = await this.axios.get(`/quotes/user/${id}`);
-    return quotes;
+  // mostrar mis quotes creadas en mi userHome
+  getAllQuotesUser(id) {
+    return this.axios.get(`/quotes/user/${id}`).then(({ data: quotes }) => quotes);
   }
 
-  async getQuote(id) {
-    const { data: quote } = await this.axios.get(`/quotes/${id}`);
-    return quote;
+  // mostrar detalle de quote desde home
+  getQuoteDetail(id) {
+    return this.axios.get(`/quotes/${id}`).then(({ data: quote }) => quote);
   }
 
- async createQuotes(body) {
-    const { data: quotes } = await this.axios.post('/quotes', body);
-   return quotes;
+  // editar la quote desde userHome
+  getQuoteById(id) {
+    return this.axios.get(`/quotes/edit/${id}`).then(({ data: quote }) => quote);
   }
 
+  // crear quotes
+  createQuotes(body) {
+    return this.axios.post('/quotes', body).then(({ data: quotes }) => quotes);
+  }
+
+  // actualizar la quote
   async updateQuotes(quote) {
     const { data: quotes } = await this.axios.put(`/quotes/${quote._id}`, quote);
     return quotes;
   }
-
 }
 
-const quoteService = new QuoteService()
+const quoteService = new QuoteService();
 
 export default quoteService;
