@@ -17,6 +17,7 @@ import QuoteNew from './views/QuoteNew';
 import QuoteDetail from './views/QuoteDetail';
 import QuoteUpdate from './views/QuoteUpdate';
 import QuoteSearch from './views/Search';
+import EditProfile from './views/EditProfile';
 
 class App extends Component {
   render() {
@@ -32,9 +33,9 @@ class App extends Component {
           <PrivateRoute exact path="/private" component={PrivateView} />
           <PrivateRoute exact path="/search" component={QuoteSearch} />
           <PrivateRoute exact path="/quotes/edit/:id" component={QuoteUpdate} />
+          <PrivateRoute exact path="/edit-profile" component={EditProfile} />
           <PrivateRoute exact path="/quotes/new" component={QuoteNew} />
         </Router>
-        
       </>
     );
   }
