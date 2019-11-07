@@ -25,7 +25,8 @@ class QuoteService {
 
   // editar la quote desde userHome
   getQuoteById(id) {
-    return this.axios.get(`/quotes/edit/${id}`).then(({ data: quote }) => quote);
+    
+    return this.axios.get(`/quotes/${id}`).then(({ data: quote }) => quote);
   }
 
   // crear quotes

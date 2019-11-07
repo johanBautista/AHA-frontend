@@ -21,6 +21,8 @@ class QuoteListUser extends Component {
     }
   }
 
+  
+
   // borrar quote
   // deleteCurrentQuote = quote => {
   //   const { currentQuote } = this.state;
@@ -42,12 +44,9 @@ class QuoteListUser extends Component {
                 <p>{quote.theme}</p>
               </div>
               <div className="section-boton">
-              {/* <button onClick={() => deleteFood(item)}>borrar</button> */}
-
-                {/* <button onClick={() => deleteCurrentQuote(quote)} className="btn5">DELETE</button>  */}
-                {/* * onClick={() => deleteCurrentQuote(quote)} * */}
-                {/* <button className="btn3">EDIT</button> */}
-                <Link to={'/quotes/edit/:id'} className="btn5">editar</Link>
+                <Link to={`/quotes/edit/${quote._id}`} className="btn5">
+                  Edit
+                </Link>
               </div>
             </div>
           );

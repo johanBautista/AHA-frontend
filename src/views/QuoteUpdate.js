@@ -4,20 +4,29 @@ import quoteService from '../services/quoteService';
 
 class QuoteUpdate extends Component {
   state = {
-    quote: [],
+    quote: {
+      text: '',
+      date: '',
+      location: '',
+      theme: '',
+    },
   };
 
   async componentDidMount() {
-    // const { id }  = this.props;
+    const {
+      match: {
+        params: { id },
+      },
+    } = this.props;
+    console.log('id', id);
     try {
-      const quote = await quoteService.getQuotesById();
+      const quote = await quoteService.getQuoteById(id);
+      console.log('hola', quote);
       this.setState({
         quote,
-        loading: false,
       });
     } catch (error) {
       // console.log(error);
-      this.setState({ loading: false });
     }
   }
 
@@ -31,7 +40,7 @@ class QuoteUpdate extends Component {
     });
   };
 
-  handleSubmit = e => {
+  handleFormSubmit = e => {
     e.preventDefault();
     const { quote } = this.state;
     const {
@@ -39,7 +48,7 @@ class QuoteUpdate extends Component {
     } = this.props;
     console.log(quote);
     quoteService
-      .updatequote(quote)
+      .updateQuotes(quote)
       .then(() => {
         this.setState({
           message: 'quote updated',
@@ -50,39 +59,34 @@ class QuoteUpdate extends Component {
   };
 
   render() {
-    const { text, date, location, theme } = this.setState;
-    // const { quote: { text, date, location, theme  }} = this.state;
+    // const { text, date, location, theme } = this.state.quote;
+    console.log(this.state.quote);
+    const {
+      quote: { text, date, location, theme },
+    } = this.state;
 
     return (
       <div>
-        <h2>Editar Quote</h2>
+        <h2>Edit Quote</h2>
         <form onSubmit={this.handleFormSubmit} className="Form">
           <label>Text:</label>
-          <br />
           <input type="text" name="text" value={text} onChange={this.handleChange} placeholder="text" />
-          <br />
 
           <label>Date:</label>
-          <br />
-          <input type="date" name="date" value={date} onChange={this.handleChange} placeholder="date" />
-          <br />
+          <input type="text" name="date" value={date} onChange={this.handleChange} placeholder="date" />
 
           <label>Location:</label>
-          <br />
           <input type="text" name="location" value={location} onChange={this.handleChange} placeholder="location" />
-          <br />
 
           <label>Theme:</label>
-          <br />
           <input type="text" name="theme" value={theme} onChange={this.handleChange} placeholder="theme" />
-          <br />
 
           <input type="submit" value="update" className="btn" />
-          {/* <button className="btn">DELETE</button>  */}
+          <button className="btn">DELETE</button>
         </form>
       </div>
     );
   }
 }
 
-export default withAuth(QuoteUpdate);
+export default QuoteUpdate;

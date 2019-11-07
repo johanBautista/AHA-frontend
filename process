@@ -16,3 +16,6 @@ hoy deploy!!
 12. subir img usuario.
 ////////////////
 
+// para q sea dinamico el pasar info se debe  utilizar los `/ruta/${quote.id}`
+
+para cambiar el estado si viene un objeto hay q declararlo en el state pa q no de problemas con el form al momento de atualizar.

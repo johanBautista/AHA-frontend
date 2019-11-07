@@ -7,6 +7,7 @@ import QuoteNew from './QuoteNew';
 import QuoteListUser from './QuoteListUser';
 
 const PrivateView = ({ user, handleLogout }) => {
+  // console.log('PROPS PRIVATE VIEW: ', this.props);
   return (
     <div>
       <nav>

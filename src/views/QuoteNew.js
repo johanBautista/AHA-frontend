@@ -66,5 +66,3 @@ class QuoteNew extends Component {
 }
 
 export default withAuth(QuoteNew);
-// funciona bien pero lo ideal seria que al drle al enviar, primero salga una notificacion conforme se ha guardado la info y segundo te lleve a otra pagina en donde
-// hayan 2 botones un update y un delete de esta forma se edita o se borra  y luego de aqui sino editas o borras un tercer boton que te redirija a tu user/home en donde este tu cita creada.
