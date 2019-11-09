@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import quoteService from '../services/quoteService';
-import logo from '../logo.png';
+import logo from '../img/logo.png';
 
 class QuoteList extends Component {
   state = {
@@ -36,7 +36,7 @@ class QuoteList extends Component {
         {quotes.map(quote => {
           return (
             <div key={quote._id} className="style-card">
-              <Link to={`/quotes/${quote._id}`} className=''>{quote.text} </Link>
+              <Link to={`/quotes/${quote._id}`} className='info-card'>{quote.text} </Link>
             </div>
           );
         })}

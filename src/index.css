@@ -32,7 +32,9 @@ h2 {
 
 /* HOME  */
 .home-jumbotron img {
-  width: 365px;
+  /* width: 365px; */
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .intro-text {
@@ -84,7 +86,7 @@ h2 {
 /* CSS GENERAL  */
 
 .role-img-detail {
-  background-image: url('./logo-detail.png');
+  background-image: url('./img/logo-detail.png');
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
@@ -134,18 +136,18 @@ h2 {
   width: 90%;
   font-size: 1.1em;
 }
-.btn2 {
+/* .btn2 {
   color: azure;
   background-color: rgba(180, 41, 41, 0.541);
   padding: 5px;
   border-radius: 9px;
-}
-.btn3 {
+} */
+/* .btn3 {
   color: azure;
   background-color: rgba(41, 101, 180, 0.541);
   padding: 5px 12px;
   border-radius: 9px;
-}
+} */
 
 nav {
   display: flex;
@@ -153,7 +155,7 @@ nav {
   margin: 15px;
 }
 
-.btn4 {
+.btn-nav {
   text-decoration-line: none;
   color: #235789;
   background-color: #f7f7f7;
@@ -162,7 +164,7 @@ nav {
   border-right: 1px solid gray;
   padding: 5px 12px;
 }
-.btn5 {
+.btn-card {
   text-decoration-line: none;
   color: #892323;
   background-color: #f7f7f7;
@@ -242,11 +244,11 @@ input[type='password'] {
   box-shadow: 1px 1px 1px 2px #88888880;
   font-size: 1.5em;
 }
-.info {
+/* .info {
   color: #ceb148;
-}
+} */
 
-.info2 {
+.info-card {
   color: #373737ac;
   text-decoration-line: none;
 }

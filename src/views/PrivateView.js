@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withAuth } from '../Context/AuthContext';
-import logo from '../logo.png';
+import logo from '../img/logo.png';
 
 import QuoteNew from './QuoteNew';
 import QuoteListUser from './QuoteListUser';
@@ -14,16 +14,16 @@ const PrivateView = ({ user, handleLogout }) => {
   return (
     <div>
       <nav>
-        <Link to={'/search'} className="btn4">
+        <Link to={'/search'} className="btn-nav">
           Search
         </Link>
-        <Link to={`/profile/${user._id}`} className="btn4">
+        <Link to={`/profile/${user._id}`} className="btn-nav">
           Edit Profile
         </Link>
-        <Link to={'/'} className="btn4">
+        <Link to={'/'} className="btn-nav">
           Create Event
         </Link>
-        <button onClick={handleLogout} className="btn5">
+        <button onClick={handleLogout} className="btn-card">
           logout2
         </button>
       </nav>

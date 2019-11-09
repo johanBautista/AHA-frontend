@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withAuth } from '../../Context/AuthContext';
-import logo2 from '../../logo2.png';
+import logo2 from '../../img/logo-login.png';
 
 // import '../../index.css';
 

@@ -6,7 +6,7 @@ class QuoteCards extends Component {
     const { quote } = this.props;
     return (
       <div>
-        <Link to={`/quotes/${quote._id}`} className="info2">
+        <Link to={`/quotes/${quote._id}`} className="info-card">
           <i>{quote.text}</i>
         </Link>
       </div>

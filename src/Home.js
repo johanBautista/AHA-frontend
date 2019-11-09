@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import jumbotron from './jumbotron.png';
-import logo from './logo.png';
-import logo2 from './logo2.png';
-import logo3 from './logo3.png';
+import jumbotron from './img/jumbotron.png';
+import logo from './img/logo.png';
+import logo2 from './img/logo-login.png';
+import logo3 from './img/icon-home.png';
 
 import './index.css';
 import QuoteCard from './views/QuoteCard';
@@ -12,8 +12,6 @@ const Home = () => {
   return (
     <div>
       <div className="home-jumbotron">
-        <img src={jumbotron} alt="jumbotron" />
-        <img src={jumbotron} alt="jumbotron" />
         <img src={jumbotron} alt="jumbotron" />
       </div>
       <section className="home-login">

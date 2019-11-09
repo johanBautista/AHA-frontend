@@ -31,7 +31,7 @@ class QuoteCard extends Component {
         {quotes.map(quote => {
           return (
             <div key={quote._id} className="style-card">
-              <QuoteCards quote={quote} className="info" />
+              <QuoteCards quote={quote} className="info-card" />
             </div>
           );
         })}
