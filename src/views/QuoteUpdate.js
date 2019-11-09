@@ -62,9 +62,11 @@ class QuoteUpdate extends Component {
   deleteQuote = e => {
     // alert('has hecho delete');
     // e.preventDefault();
-    const { id } = this.state;
+    const { _id } = this.state.quote;
+    console.log('id', _id);
+
     quoteService
-      .getQuoteDelete(id)
+      .getQuoteDelete(_id)
       .then(() => {
         console.log('esto no borra');
 

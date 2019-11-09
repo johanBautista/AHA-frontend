@@ -21,7 +21,8 @@ We are all geniuses, the problem is not knowing what. AHA-Moment is the app wher
 - **Events list** As a user I want to see all the events available so that I can choose which ones I want to attend
 - **Events create** As a user I want to create an event so that I can invite others to attend
 - **Events detail** As a user I want to see the event details and attendee list of one event so that I can decide if I want to attend
-- **Attend event** As a user, I want to be able to attend the event so that the organizers can count on me. -**Filter quotes** As a user, I want to filter appointments by name and location.
+- **Attend event** As a user, I want to be able to attend the event so that the organizers can count on me. 
+- **Filter quotes** As a user, I want to filter appointments by name and location.
 
 ## Backlog
 
