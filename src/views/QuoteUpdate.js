@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { Component } from 'react';
 // import { withAuth } from '../Context/AuthContext';
 import quoteService from '../services/quoteService';
@@ -18,10 +19,10 @@ class QuoteUpdate extends Component {
         params: { id },
       },
     } = this.props;
-    console.log('id', id);
+    // console.log('id', id);
     try {
       const quote = await quoteService.getQuoteById(id);
-      console.log('hola', quote);
+      // console.log('hola', quote);
       this.setState({
         quote,
       });
@@ -46,7 +47,7 @@ class QuoteUpdate extends Component {
     const {
       history: { push },
     } = this.props;
-    console.log(quote);
+    // console.log(quote);
     quoteService
       .updateQuotes(quote)
       .then(() => {
@@ -57,10 +58,24 @@ class QuoteUpdate extends Component {
       })
       .catch(() => {});
   };
-  
+
+  deleteQuote = e => {
+    // alert('has hecho delete');
+    // e.preventDefault();
+    const { id } = this.state;
+    quoteService
+      .getQuoteDelete(id)
+      .then(() => {
+        console.log('esto no borra');
+
+        this.setState({ message: 'quote deelted' });
+      })
+      .catch(() => {});
+  };
+
   render() {
     // const { text, date, location, theme } = this.state.quote;
-    console.log(this.state.quote);
+    // console.log(this.state.quote);
     const {
       quote: { text, date, location, theme },
     } = this.state;
@@ -81,9 +96,11 @@ class QuoteUpdate extends Component {
           <label>Theme:</label>
           <input type="text" name="theme" value={theme} onChange={this.handleChange} placeholder="theme" />
 
-          <input type="submit" value="update" className="connect-btn" />
-          <button className="connect-btn">DELETE</button>
+          <input type="submit" value="UPDATE" className="connect-btn" />
         </form>
+        <button onClick={e => this.deleteQuote(e)} className="connect-btn">
+          DELETE
+        </button>
       </div>
     );
   }

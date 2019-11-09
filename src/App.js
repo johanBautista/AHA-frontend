@@ -33,7 +33,7 @@ class App extends Component {
           <PrivateRoute exact path="/private" component={PrivateView} />
           <PrivateRoute exact path="/search" component={QuoteSearch} />
           <PrivateRoute exact path="/quotes/edit/:id" component={QuoteUpdate} />
-          <PrivateRoute exact path="/edit-profile" component={EditProfile} />
+          <PrivateRoute exact path="/profile/:id" component={EditProfile} />
           <PrivateRoute exact path="/quotes/new" component={QuoteNew} />
         </Router>
       </>

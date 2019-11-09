@@ -17,7 +17,7 @@ const PrivateView = ({ user, handleLogout }) => {
         <Link to={'/search'} className="btn4">
           Search
         </Link>
-        <Link to={'/edit-profile'} className="btn4">
+        <Link to={`/profile/${user._id}`} className="btn4">
           Edit Profile
         </Link>
         <Link to={'/'} className="btn4">

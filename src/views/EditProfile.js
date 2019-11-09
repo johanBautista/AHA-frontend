@@ -1,16 +1,33 @@
 import React, { Component } from 'react';
+// import quoteService from '../services/quoteService';
 
 class QuoteEdit extends Component {
   state = {
     username: '',
     password: '',
   };
-  
-  async componentDidMount() {}
 
-  handleChange = e => {}
+  // async componentDidMount() {
+  //   const {
+  //     match: {
+  //       params: { id },
+  //     },
+  //   } = this.props;
+  //   console.log('id', id);
+  //   try {
+  //     const quote = await quoteService.getQuoteById(id);
+  //     console.log('hola', quote);
+  //     this.setState({
+  //       quote,
+  //     });
+  //   } catch (error) {
+  //     // console.log(error);
+  //   }
+  // }
 
-  handleFormSubmit = e => {}
+  // handleChange = e => {};
+
+  // handleFormSubmit = e => {};
 
   render() {
     const { username, password } = this.state;

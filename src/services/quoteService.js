@@ -25,7 +25,6 @@ class QuoteService {
 
   // editar la quote desde userHome
   getQuoteById(id) {
-    
     return this.axios.get(`/quotes/${id}`).then(({ data: quote }) => quote);
   }
 
@@ -38,6 +37,11 @@ class QuoteService {
   async updateQuotes(quote) {
     const { data: quotes } = await this.axios.put(`/quotes/${quote._id}`, quote);
     return quotes;
+  }
+
+  getQuoteDelete(id) {
+    console.log('vamos a borrar desde get');
+    return this.axios.delete(`/quotes/${id}`).then(({ data: quotes }) => quotes);
   }
 }
 

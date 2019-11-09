@@ -36,7 +36,7 @@ class QuoteListUser extends Component {
               </div>
               <div className="section-boton">
                 <Link to={`/quotes/edit/${quote._id}`} className="btn5">
-                  Edit
+                  EDIT
                 </Link>
               </div>
             </div>
