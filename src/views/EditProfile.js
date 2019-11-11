@@ -40,6 +40,8 @@ class QuoteEdit extends Component {
           <input type="text" name="username" value={username} onChange={this.handleChange} placeholder="username" />
           {/* <label>Password:</label> */}
           <input type="password" name="password" value={password} onChange={this.handleChange} placeholder="password" />
+          <input type="file" name="image" id="inputGroupeFile" />
+          <label htmlFor="inputGroupeFile"> Choose file</label>
           <input type="submit" value="Update" className="connect-btn" />
         </form>
       </div>
