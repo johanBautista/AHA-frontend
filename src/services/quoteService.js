@@ -43,6 +43,7 @@ class QuoteService {
     console.log('vamos a borrar desde get');
     return this.axios.delete(`/quotes/${id}`).then(({ data: quotes }) => quotes);
   }
+  
 }
 
 const quoteService = new QuoteService();

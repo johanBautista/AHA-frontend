@@ -20,7 +20,7 @@ const PrivateView = ({ user, handleLogout }) => {
         <Link to={`/profile/${user._id}`} className="btn-nav">
           Edit Profile
         </Link>
-        <Link to={'/'} className="btn-nav">
+        <Link to={'/event'} className="btn-nav">
           Create Event
         </Link>
         <button onClick={handleLogout} className="btn-card">
