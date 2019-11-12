@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import user from '../img/user-icon.png';
+import '../index.css';
+
 // import quoteService from '../services/quoteService';
 
 class QuoteEdit extends Component {
@@ -36,12 +39,20 @@ class QuoteEdit extends Component {
       <div>
         <h2>Edit profile</h2>
         <form className="form-style" onSubmit={this.handleFormSubmit}>
-          {/* <label>Username mother:</label> */}
+          <label>Username:</label>
           <input type="text" name="username" value={username} onChange={this.handleChange} placeholder="username" />
-          {/* <label>Password:</label> */}
+          <label>Password:</label>
           <input type="password" name="password" value={password} onChange={this.handleChange} placeholder="password" />
-          <input type="file" name="image" id="inputGroupeFile" />
-          <label htmlFor="inputGroupeFile"> Choose file</label>
+
+          <div className="upload">
+            < div className="img-upload"></div>
+            <div className="img-choose">
+              <input type="file" name="image" id="inputGroupeFile" className="img-btn" />
+              <button className="img-btn">Go!</button>
+            </div>
+          </div>
+
+
           <input type="submit" value="Update" className="connect-btn" />
         </form>
       </div>

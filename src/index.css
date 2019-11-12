@@ -136,18 +136,30 @@ h2 {
   width: 90%;
   font-size: 1.1em;
 }
-/* .btn2 {
-  color: azure;
-  background-color: rgba(180, 41, 41, 0.541);
-  padding: 5px;
-  border-radius: 9px;
-} */
-/* .btn3 {
-  color: azure;
-  background-color: rgba(41, 101, 180, 0.541);
-  padding: 5px 12px;
-  border-radius: 9px;
-} */
+.upload {
+  background-color: #23588941;
+  border-radius: 10px;
+  display: flex;
+  padding: 20px;
+  margin: 15px;
+}
+.img-choose {
+  display: inline-block;
+  margin: 0 10px 0 10px;
+}
+.img-upload {
+  background-image: url('./img/user-icon.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 15px;
+}
+.img-btn {
+  color: #235789;
+  background-color: #f7f7f7;
+  border: 1px solid #235789;
+  border-radius: 10px;
+  width: 100%;
+}
 
 nav {
   display: flex;
@@ -166,7 +178,7 @@ nav {
 }
 .btn-card {
   text-decoration-line: none;
-  color: #892323;
+  color: #ceb148;
   background-color: #f7f7f7;
   border: 0;
   border-bottom: 1px solid gray;

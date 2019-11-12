@@ -18,13 +18,13 @@ const PrivateView = ({ user, handleLogout }) => {
           Search
         </Link>
         <Link to={`/profile/${user._id}`} className="btn-nav">
-          Edit Profile
+          Profile
         </Link>
         <Link to={'/event'} className="btn-nav">
-          Create Event
+          New Event
         </Link>
         <button onClick={handleLogout} className="btn-card">
-          logout2
+          LOGOUT
         </button>
       </nav>
       {/* <p>Vista protegida!</p> */}
