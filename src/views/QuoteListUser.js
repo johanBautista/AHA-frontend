@@ -16,9 +16,14 @@ class QuoteListUser extends Component {
       this.setState({
         quotes,
       });
+      console.log(this.props.newquotes);
+      // console.log(t);
+      
+      // this.setState({quotes:[...this.state.quotes, this.props.quotes]})
     } catch (error) {
       console.log(error);
     }
+
   }
 
   render() {

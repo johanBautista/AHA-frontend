@@ -21,18 +21,28 @@ class QuoteNew extends Component {
   };
 
   // lo q tengo q subir
-  handleFormSubmit = event => {
+  handleFormSubmit = async event => {
     event.preventDefault();
-    quoteService.createQuotes(this.state);
-    this.setState({
-      text: '',
-      date: '',
-      location: '',
-      theme: '',
-      owner: '',
-    });
-  };
+    console.log(this.state);
 
+    await quoteService.createQuotes(this.state);
+    this.setState(
+      {
+        text: '',
+        date: '',
+        location: '',
+        theme: '',
+        owner: '',
+      },
+      this.props.handleQuote(this.state),
+      // () => {
+      //   console.log(this.state);
+
+      //   this.props.handleQuote(this.state);
+      // },
+    );
+    // console.log(this.state);
+  };
 
   render() {
     return (
