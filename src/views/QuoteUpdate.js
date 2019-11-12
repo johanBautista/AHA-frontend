@@ -87,7 +87,16 @@ class QuoteUpdate extends Component {
         <h2>Edit Quote</h2>
         <form onSubmit={this.handleFormSubmit} className="Form">
           <label>Text:</label>
-          <input type="text" name="text" value={text} onChange={this.handleChange} placeholder="text" />
+          <textarea
+            type="textarea"
+            rows="5"
+            cols="55"
+            name="text"
+            value={text}
+            onChange={this.handleChange}
+            placeholder="text"
+            className="textarea-style"
+          />
 
           <label>Date:</label>
           <input type="text" name="date" value={date} onChange={this.handleChange} placeholder="date" />

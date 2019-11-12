@@ -191,7 +191,17 @@ nav {
 form {
   margin-top: 54px;
 }
-
+.textarea-style {
+  background-color: #f3f3f3;
+  font-family: 'Raleway', sans-serif;
+  color: #373737;
+  font-size: 1.1em;
+  display: block;
+  border: 0;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  width: 90%;
+}
 input[type='date'] {
   margin: 20px;
   padding: 5px 20%;
@@ -216,6 +226,7 @@ input[type='text'] {
   padding: 10px;
   width: 90%;
 }
+
 input[type='password'] {
   background-color: #f7f7f7;
   font-family: 'Raleway', sans-serif;

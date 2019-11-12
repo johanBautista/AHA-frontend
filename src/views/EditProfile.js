@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import user from '../img/user-icon.png';
 import '../index.css';
 
 // import quoteService from '../services/quoteService';
