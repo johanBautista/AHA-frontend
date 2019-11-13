@@ -16,7 +16,7 @@ import AnonRoute from './components/AnonRoute';
 import QuoteNew from './views/QuoteNew';
 import QuoteDetail from './views/QuoteDetail';
 import QuoteUpdate from './views/QuoteUpdate';
-import QuoteSearch from './views/Search';
+import QuoteSearch from './components/search/Search';
 import EditProfile from './views/EditProfile';
 
 class App extends Component {
