@@ -32,11 +32,17 @@ class QuoteList extends Component {
 
         <div className="intro-text">
           <h2>Search Quotes </h2>
+          <div>
+            <input type="search" id="miBusqueda" name="q" className="search-style" />
+            <button className="search-btn">Buscar</button>
+          </div>
         </div>
         {quotes.map(quote => {
           return (
             <div key={quote._id} className="style-card">
-              <Link to={`/quotes/${quote._id}`} className='info-card'>{quote.text} </Link>
+              <Link to={`/quotes/${quote._id}`} className="info-card">
+                {quote.text}{' '}
+              </Link>
             </div>
           );
         })}
