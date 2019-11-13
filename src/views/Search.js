@@ -1,27 +1,50 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import quoteService from '../services/quoteService';
+// import searchBar from './SearchBar';
 import logo from '../img/logo.png';
+import SearchBar from './SearchBar';
 
 class QuoteList extends Component {
   state = {
     quotes: [],
+    searched: [],
     // user:''
   };
 
-  async componentDidMount() {
-    try {
-      const quotes = await quoteService.getAllQuotes();
-      this.setState({
-        quotes,
+  // async componentDidMount() {
+  //   try {
+  //     const quotes = await quoteService.getAllQuotes();
+  //     this.setState({
+  //       quotes,
+  //     });
+  //   } catch (error) {
+  //     // console.log(error);
+  //   }
+  // }
+
+  // handleChange = event => {
+  //   this.props.onSearch(event.target.value);
+  // };
+
+  findQuote = query => {
+    const { quotes } = this.state;
+    if (query !== '') {
+      const result = quotes.filter(item => {
+        return item.name.toLowerCase().includes(query.toLowerCase());
       });
-    } catch (error) {
-      // console.log(error);
+      this.setState({
+        searched: result,
+      });
+    } else {
+      this.setState({
+        searched: [],
+      });
     }
-  }
+  };
 
   render() {
-    const { quotes } = this.state; // loading
+    const { quotes, searched } = this.state; // loading
     return (
       <div>
         <div className="home-features">
@@ -30,13 +53,21 @@ class QuoteList extends Component {
           </Link>
         </div>
 
-        <div className="intro-text">
-          <h2>Search Quotes </h2>
-          <div>
-            <input type="search" id="miBusqueda" name="q" className="search-style" />
-            <button className="search-btn">Buscar</button>
-          </div>
-        </div>
+        <SearchBar onSearch={this.findQuote} />
+        {/* <div className="column">
+              {searched && <div> {searched.map((item, index) => {
+                  return (
+                    <FoodBox key={`${item.name}-${index}`} name={item.name} calories={item.calories} image={item.image} addTheFood={this.addTodayFood}/>
+                  )
+              })} </div> }
+              {searched.length === 0 && <div> {foods.map((item, index) => {
+                  return (
+                    <FoodBox key={`${item.name}-${index}`} name={item.name} calories={item.calories} image={item.image} addTheFood={this.addTodayFood}/>
+                  )
+              })} </div> } 
+           </div>  */}
+        {/* ////////////////////////////////////////////// */}
+
         {quotes.map(quote => {
           return (
             <div key={quote._id} className="style-card">
