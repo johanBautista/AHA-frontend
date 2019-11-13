@@ -50,12 +50,15 @@ class QuoteNew extends Component {
         <p>Create Quote</p>
 
         <form onSubmit={this.handleFormSubmit}>
-          <input
-            type="text"
+          <textarea
+            type="textarea"
+            rows="5"
+            cols="55"
             name="text"
             value={this.state.text}
             onChange={this.handleChange}
             placeholder="do you have an idea?"
+            className="textarea-style"
           />
           <input
             type="text"
