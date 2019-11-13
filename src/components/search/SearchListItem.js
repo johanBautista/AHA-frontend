@@ -6,7 +6,6 @@ const SearchListItem = ({ quote }) => {
   return (
     <div className="style-card">
       <li className="info-card">{quote.text}</li>
-      <li className="info-card">{quote.date}</li>
     </div>
   );
 };
