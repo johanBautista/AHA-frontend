@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { withAuth } from '../Context/AuthContext';
-import quoteService from '../services/quoteService';
+import { withAuth } from '../../Context/AuthContext';
+import quoteService from '../../services/quoteService';
 
 class QuoteListUser extends Component {
   state = {

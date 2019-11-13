@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { withAuth } from '../Context/AuthContext';
 import logo from '../img/logo.png';
 
-import QuoteNew from './QuoteNew';
-import QuoteListUser from './QuoteListUser';
+import QuoteNew from './quotes/QuoteNew';
+import QuoteListUser from './quotes/QuoteListUser';
 
 class PrivateView extends Component {
   state = {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import quoteService from '../services/quoteService';
-import { withAuth } from '../Context/AuthContext';
-import '../index.css';
+import quoteService from '../../services/quoteService';
+import { withAuth } from '../../Context/AuthContext';
+import '../../index.css';
 
 class QuoteNew extends Component {
   state = {

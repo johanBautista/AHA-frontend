@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import '../index.css';
-import quoteService from '../services/quoteService';
+import '../../index.css';
+import quoteService from '../../services/quoteService';
 import QuoteCards from './QuoteCards';
 
 class QuoteCard extends Component {

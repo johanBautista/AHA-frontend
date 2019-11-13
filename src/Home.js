@@ -4,9 +4,9 @@ import jumbotron from './img/jumbotron.png';
 import logo from './img/logo.png';
 import logo2 from './img/logo-login.png';
 import logo3 from './img/icon-home.png';
+import QuoteCard from './views/quotes/QuoteCard';
 
 import './index.css';
-import QuoteCard from './views/QuoteCard';
 
 const Home = () => {
   return (

@@ -13,9 +13,9 @@ import './index.css';
 import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 
-import QuoteNew from './views/QuoteNew';
-import QuoteDetail from './views/QuoteDetail';
-import QuoteUpdate from './views/QuoteUpdate';
+import QuoteNew from './views/quotes/QuoteNew';
+import QuoteDetail from './views/quotes/QuoteDetail';
+import QuoteUpdate from './views/quotes/QuoteUpdate';
 import QuoteSearch from './components/search/Search';
 import EditProfile from './views/EditProfile';
 

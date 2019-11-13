@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import React, { Component } from 'react';
 // import { withAuth } from '../Context/AuthContext';
-import quoteService from '../services/quoteService';
+import quoteService from '../../services/quoteService';
 
 class QuoteUpdate extends Component {
   state = {

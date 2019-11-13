@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import '../index.css';
-import quoteService from '../services/quoteService';
+import '../../index.css';
+import quoteService from '../../services/quoteService';
 
 class QuoteCard extends Component {
   state = {
