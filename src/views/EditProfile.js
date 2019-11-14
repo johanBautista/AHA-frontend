@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../index.css';
 import { withAuth } from '../Context/AuthContext';
 
-import quoteService from '../services/quoteService';
+// import quoteService from '../services/quoteService';
 
 class QuoteEdit extends Component {
   state = {
@@ -50,7 +50,7 @@ class QuoteEdit extends Component {
   // };
 
   render() {
-    const { username, password } = this.props;
+    // const { username, password } = this.props;
     // const {
     //   quote: { text, date, location, theme },
     // } = this.state;

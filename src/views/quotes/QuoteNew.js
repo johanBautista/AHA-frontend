@@ -32,7 +32,6 @@ class QuoteNew extends Component {
         date: '',
         location: '',
         theme: '',
-        owner: '',
       },
       this.props.handleQuote(this.state),
       // () => {
