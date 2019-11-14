@@ -30,7 +30,7 @@ class QuoteList extends Component {
       <div>
         <div className="home-features">
           <Link to={'/'}>
-            <img className="role-img-home" src={logo} alt="dos" />
+            <img className="role-img-home" src={logo} alt="doso" />
           </Link>
         </div>
 
