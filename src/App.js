@@ -18,6 +18,7 @@ import QuoteDetail from './views/quotes/QuoteDetail';
 import QuoteUpdate from './views/quotes/QuoteUpdate';
 import QuoteSearch from './components/search/Search';
 import EditProfile from './views/EditProfile';
+import CreateEvent from './views/CreateEvent';
 
 class App extends Component {
   render() {
@@ -31,6 +32,7 @@ class App extends Component {
           <AnonRoute exact path="/login" component={Login} />
 
           <PrivateRoute exact path="/private" component={PrivateView} />
+          <PrivateRoute exact path="/events" component={CreateEvent} />
           <PrivateRoute exact path="/search" component={QuoteSearch} />
           <PrivateRoute exact path="/quotes/edit/:id" component={QuoteUpdate} />
           <PrivateRoute exact path="/profile/:id" component={EditProfile} />

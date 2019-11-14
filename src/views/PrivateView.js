@@ -49,7 +49,7 @@ class PrivateView extends Component {
           <Link to={`/profile/${user._id}`} className="btn-nav">
             Profile
           </Link>
-          <Link to={'/event'} className="btn-nav">
+          <Link to={'/events'} className="btn-nav">
             New Event
           </Link>
           <button onClick={handleLogout} className="btn-card">

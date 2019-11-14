@@ -1,5 +1,5 @@
 import axios from 'axios';
-console.log('algo', process.env.REACT_APP_BACKEND_BASE_URL);
+// console.log('algo', process.env.REACT_APP_BACKEND_BASE_URL);
 class AuthService {
   constructor() {
     this.auth = axios.create({
