@@ -18,7 +18,7 @@ import QuoteDetail from './views/quotes/QuoteDetail';
 import QuoteUpdate from './views/quotes/QuoteUpdate';
 import QuoteSearch from './components/search/Search';
 import EditProfile from './views/EditProfile';
-import CreateEvent from './views/CreateEvent';
+import CreateEvent from './views/events/CreateEvent';
 
 class App extends Component {
   render() {
