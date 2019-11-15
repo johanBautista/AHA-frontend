@@ -306,3 +306,11 @@ i {
   padding: 5px;
   border-radius: 8px;
 }
+ 
+
+/* styles events  */
+
+.styles-card-event {
+  display: flex;
+  align-items: center;
+}

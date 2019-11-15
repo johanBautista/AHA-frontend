@@ -9,7 +9,19 @@ class CreateEvent extends Component {
     description: '',
     location: '',
     date: '',
+    event: [],
   };
+
+  async componentDidMount() {
+    try {
+      const event = await eventService.getAllEvents();
+      this.setState({
+        event,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   handleChange = event => {
     let { name, value } = event.target;
@@ -32,6 +44,7 @@ class CreateEvent extends Component {
   };
 
   render() {
+    const { event } = this.state;
     return (
       <div>
         <h2>Create Events</h2>
@@ -54,7 +67,13 @@ class CreateEvent extends Component {
           <input type="date" name="date" value={this.state.date} onChange={this.handleChange} placeholder="Date" />
           <input type="submit" value="ADD NEW" className="connect-btn" />
         </form>
-        <EventList description="perro"/>
+        {event.map(aEvent => {
+          return (
+            <div key={aEvent._id} className="style-card">
+              <EventList event={aEvent} />
+            </div>
+          );
+        })}
       </div>
     );
   }

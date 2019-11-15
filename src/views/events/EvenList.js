@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
+import logo from '../../img/logo.png';
 
 class EvenList extends Component {
-  render(props) {
+  render() {
+    const { event } = this.props;
     return (
       <div>
-        <h2>aqui estamos en la lista{this.props.description}</h2>
-        <p>
-                  {this.props.description}
-
-        </p>
+        <div>
+          <div className="styles-card-event">
+            <img src={logo} alt="logo" className="role-img-home" />
+            <div>
+              <h4>{event.title}</h4>
+              <div className="style-card-info">
+                <i>{event.date}</i>
+                <b>{event.location}</b>
+              </div>
+            </div>
+          </div>
+          <i>{event.description}</i>
+        </div>
       </div>
     );
   }
