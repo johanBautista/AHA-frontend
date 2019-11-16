@@ -97,7 +97,7 @@ class QuoteUpdate extends Component {
           <input type="text" name="theme" value={theme} onChange={this.handleChange} placeholder="theme" />
 
           <input type="submit" value="UPDATE" className="connect-btn" />
-          <input type="submit" value="DEL" onClick={e => this.deleteQuote(e)} className="connect-btn" />
+          <input type="submit" value="DELETE" onClick={e => this.deleteQuote(e)} className="connect-btn" />
         </form>
       </div>
     );

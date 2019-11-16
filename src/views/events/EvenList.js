@@ -1,7 +1,23 @@
 import React, { Component } from 'react';
+// import { withAuth } from '../../Context/AuthContext';
 import logo from '../../img/logo.png';
+import eventService from '../../services/eventService';
 
 class EvenList extends Component {
+  state = {
+    event: {},
+  };
+
+  deleteEvent = async () => {
+    const { id } = this.state.event;
+    eventService
+      .deleteEvent(id)
+      .then(() => {
+        this.setState({ message: 'event deleted' });
+      })
+      .catch(() => {});
+  };
+
   render() {
     const { event } = this.props;
     return (
@@ -18,13 +34,14 @@ class EvenList extends Component {
             </div>
           </div>
           <i>{event.description}</i>
-          <button onClick={e => this.deleteQuote(e)} className="delete-btn">
-          DELETE
-        </button>
+          <button onClick={e => this.deleteEvent(e)} className="delete-btn">
+            DELETE
+          </button>
         </div>
       </div>
     );
   }
 }
 
+// export default withAuth(EvenList);
 export default EvenList;
