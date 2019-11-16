@@ -13,6 +13,9 @@ button {
   font-family: 'Raleway', sans-serif;
   color: #373737;
 }
+li{
+  text-decoration-style: none;
+}
 
 body {
   margin: 5px;
@@ -258,6 +261,19 @@ input[type='password'] {
   color: rgb(75, 9, 9);
   box-shadow: 2px 2px 2px 2px #88888880;
   font-size: 1.5em;
+}
+.style-card-search li {
+  background-color: #f7f7f7;
+  padding: 5px;
+  margin: 15px;
+  color: #235789;
+  box-shadow: 2px 2px 2px 2px #88888880;
+  font-size: 1.2em;
+  text-decoration-line: none;
+}
+.perro li {
+  text-decoration-line: none;
+
 }
 .style-card-detail {
   padding: 5px;
