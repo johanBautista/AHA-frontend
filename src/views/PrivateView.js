@@ -7,6 +7,7 @@ import logo from '../img/logo.png';
 
 import QuoteNew from './quotes/QuoteNew';
 import QuoteListUser from './quotes/QuoteListUser';
+// import EventList from './events/EvenList'
 
 class PrivateView extends Component {
   state = {
@@ -40,6 +41,7 @@ class PrivateView extends Component {
   render() {
     const { user, handleLogout } = this.props;
     const { quotesList } = this.state;
+    // const { aEvent } = this.state;
     return (
       <div>
         <nav>
@@ -53,7 +55,7 @@ class PrivateView extends Component {
             New Event
           </Link>
           <button onClick={handleLogout} className="btn-card">
-            logout2
+            LOGOUT
           </button>
         </nav>
         <h3>Hi, How are you: {user.username}</h3>
@@ -63,6 +65,8 @@ class PrivateView extends Component {
         </div>
         <QuoteNew handleQuote={this.handleQuote} />
         <QuoteListUser data={quotesList} />
+        {/* <EventList /> */}
+
       </div>
     );
   }
