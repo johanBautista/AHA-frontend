@@ -40,10 +40,6 @@ class QuoteCard extends Component {
             <p>{quote.theme}</p>
           </div>
           <div className="section-boton">
-            {/* <i>{quote.owner}</i>        pasar el nombre del creador de la cita al quotedetail de home      */}
-            {/* <Link to={'/login'} className="btn-card">
-              DISLIKE
-            </Link> */}
             <Link to={'/login'} className="btn-card">
               LIKE
             </Link>

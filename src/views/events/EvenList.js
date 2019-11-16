@@ -18,6 +18,9 @@ class EvenList extends Component {
             </div>
           </div>
           <i>{event.description}</i>
+          <button onClick={e => this.deleteQuote(e)} className="connect-btn">
+          DELETE
+        </button>
         </div>
       </div>
     );

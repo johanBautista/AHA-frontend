@@ -9,7 +9,6 @@ class QuoteList extends Component {
   constructor(props) {
     super(props);
 
-    // this.quoteSearch()
     this.state = { quotes: [] };
   }
 
@@ -25,7 +24,6 @@ class QuoteList extends Component {
   }
 
   render() {
-    // const { quotes, searched } = this.state; // loading
     return (
       <div>
         <div className="home-features">

@@ -23,8 +23,6 @@ class QuoteNew extends Component {
   // lo q tengo q subir
   handleFormSubmit = async event => {
     event.preventDefault();
-    console.log(this.state);
-
     await quoteService.createQuotes(this.state);
     this.setState(
       {
@@ -34,13 +32,7 @@ class QuoteNew extends Component {
         theme: '',
       },
       this.props.handleQuote(this.state),
-      // () => {
-      //   console.log(this.state);
-
-      //   this.props.handleQuote(this.state);
-      // },
     );
-    // console.log(this.state);
   };
 
   render() {

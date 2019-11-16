@@ -19,10 +19,8 @@ class QuoteUpdate extends Component {
         params: { id },
       },
     } = this.props;
-    // console.log('id', id);
     try {
       const quote = await quoteService.getQuoteById(id);
-      // console.log('hola', quote);
       this.setState({
         quote,
       });
@@ -47,7 +45,6 @@ class QuoteUpdate extends Component {
     const {
       history: { push },
     } = this.props;
-    // console.log(quote);
     quoteService
       .updateQuotes(quote)
       .then(() => {
@@ -60,24 +57,16 @@ class QuoteUpdate extends Component {
   };
 
   deleteQuote = e => {
-    // alert('has hecho delete');
-    // e.preventDefault();
     const { _id } = this.state.quote;
-    console.log('id', _id);
-
     quoteService
       .getQuoteDelete(_id)
       .then(() => {
-        console.log('esto no borra');
-
         this.setState({ message: 'quote deelted' });
       })
       .catch(() => {});
   };
 
   render() {
-    // const { text, date, location, theme } = this.state.quote;
-    // console.log(this.state.quote);
     const {
       quote: { text, date, location, theme },
     } = this.state;

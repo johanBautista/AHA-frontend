@@ -14,13 +14,18 @@ class EventService {
   }
 
   // mostrar eventos creados
-  getAllEventUser(id) {
-    return this.axios.get(`/events/user/${id}`).then(({ data: events }) => events);
+  getAllEventUser(_id) {    
+    return this.axios.get(`/events/user/${_id}`).then(({ data: events }) => events);
   }
 
   // mostrar todos los eventos creados
   getAllEvents() {
     return this.axios.get('/events').then(({ data: events }) => events);
+  }
+
+  // borrar evento
+  deleteEvent(id) {
+    return this.axios.delete(`/events/${id}`).then(({ data: events }) => events);
   }
 }
 

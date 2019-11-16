@@ -1,5 +1,8 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { withAuth } from '../../Context/AuthContext';
+import logo from '../../img/logo.png';
 import eventService from '../../services/eventService';
 import EventList from './EvenList';
 
@@ -9,15 +12,23 @@ class CreateEvent extends Component {
     description: '',
     location: '',
     date: '',
+    owner: this.props.user._id,
     event: [],
+  };
+
+  actualizarEvent = async () => {
+    const {
+      user: { _id },
+    } = this.props;
+    const event = await eventService.getAllEventUser(_id);
+    this.setState({
+      event: [...event],
+    });
   };
 
   async componentDidMount() {
     try {
-      const event = await eventService.getAllEvents();
-      this.setState({
-        event,
-      });
+      this.actualizarEvent();
     } catch (error) {
       console.log(error);
     }
@@ -30,7 +41,6 @@ class CreateEvent extends Component {
 
   handleFormSubmit = async event => {
     event.preventDefault();
-    // console.log(this.state);
     await eventService.createEvent(this.state);
     this.setState(
       {
@@ -39,23 +49,31 @@ class CreateEvent extends Component {
         location: '',
         date: '',
       },
-      // this.props.handleQuote(this.state),
     );
+    this.actualizarEvent();
   };
 
   render() {
     const { event } = this.state;
     return (
       <div>
+        <div className="home-features">
+          <Link to={'/'}>
+            <img className="role-img-home" src={logo} alt="doso" />
+          </Link>
+        </div>
         <h2>Create Events</h2>
-        <form onSubmit={this.handleFormSubmit}>
+        <form onSubmit={this.handleFormSubmit} className="Form">
           <input type="text" name="title" value={this.state.title} onChange={this.handleChange} placeholder="Title" />
-          <input
-            type="text"
+          <textarea
+            type="textarea"
+            rows="5"
+            cols="55"
             name="description"
             value={this.state.description}
             onChange={this.handleChange}
             placeholder="Description"
+            className="textarea-style"
           />
           <input
             type="text"
@@ -79,4 +97,4 @@ class CreateEvent extends Component {
   }
 }
 
-export default CreateEvent;
+export default withAuth(CreateEvent);
