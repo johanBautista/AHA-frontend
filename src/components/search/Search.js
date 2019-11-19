@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import quoteService from '../../services/quoteService';
 import SearchList from './SearchList';
 import logo from '../../img/logo.png';
-import SearchBar from './SearchBar';
+// import SearchBar from './SearchBar';
 
 class QuoteList extends Component {
   constructor(props) {
@@ -31,8 +31,8 @@ class QuoteList extends Component {
             <img className="role-img-home" src={logo} alt="doso" />
           </Link>
         </div>
-
-        <SearchBar onSearchTermChange={term => this.quoteSearch(term)} />
+        <h2>All the Quotes</h2>
+        {/* <SearchBar onSearchTermChange={term => this.quoteSearch(term)} /> */}
         <SearchList quotes={this.state.quotes} />
       </div>
     );

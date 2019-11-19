@@ -340,3 +340,8 @@ i {
   display: flex;
   align-items: center;
 }
+
+.punto {
+  text-decoration-line: none;
+  color: aqua;
+}

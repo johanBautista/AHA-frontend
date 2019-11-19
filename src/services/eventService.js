@@ -24,7 +24,10 @@ class EventService {
   }
 
   // borrar evento
+  
   deleteEvent(id) {
+    console.log(id);
+    
     return this.axios.delete(`/events/${id}`).then(({ data: event }) => event);
   }
 }

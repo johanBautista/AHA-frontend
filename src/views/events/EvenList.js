@@ -34,9 +34,9 @@ class EvenList extends Component {
             </div>
           </div>
           <i>{event.description}</i>
-          <button onClick={e => this.deleteEvent(e)} className="delete-btn">
+          {/* <button onClick={e => this.deleteEvent(e)} className="delete-btn">
             DELETE
-          </button>
+          </button> */}
         </div>
       </div>
     );

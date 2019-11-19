@@ -7,7 +7,6 @@ import logo from '../img/logo.png';
 
 import QuoteNew from './quotes/QuoteNew';
 import QuoteListUser from './quotes/QuoteListUser';
-// import EventList from './events/EvenList'
 
 class PrivateView extends Component {
   state = {
@@ -41,16 +40,16 @@ class PrivateView extends Component {
   render() {
     const { user, handleLogout } = this.props;
     const { quotesList } = this.state;
-    // const { aEvent } = this.state;
     return (
       <div>
         <nav>
           <Link to={'/search'} className="btn-nav">
-            Search
+            Quotes
+            {/* Search */}
           </Link>
-          <Link to={`/profile/${user._id}`} className="btn-nav">
+          {/* <Link to={`/profile/${user._id}`} className="btn-nav">
             Profile
-          </Link>
+          </Link> */}
           <Link to={'/events'} className="btn-nav">
             New Event
           </Link>
@@ -65,8 +64,6 @@ class PrivateView extends Component {
         </div>
         <QuoteNew handleQuote={this.handleQuote} />
         <QuoteListUser data={quotesList} />
-        {/* <EventList /> */}
-
       </div>
     );
   }
