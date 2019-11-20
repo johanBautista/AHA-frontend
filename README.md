@@ -59,9 +59,9 @@ We are all geniuses, the problem is not knowing what. AHA-Moment is the app wher
 ​
 The url to your repository and to your deployed project
 ​
--[Repository Frontend Link](https://github.com/johanBautista/AHA-frontend)
+- [Repository Frontend Link](https://github.com/johanBautista/AHA-frontend).
 ​
--[Repository Backend Link](https://github.com/johanBautista/AHA-backend)
+-[Repository Backend Link](https://github.com/johanBautista/AHA-backend).
 ​
 -[Deploy Link Backend](http://heroku.com/)
 ​
