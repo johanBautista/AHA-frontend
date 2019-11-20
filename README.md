@@ -53,19 +53,20 @@ We are all geniuses, the problem is not knowing what. AHA-Moment is the app wher
 
 
 ## Links
-
-### Git
-
 ​
 The url to your repository and to your deployed project
 ​
-- [Repository Frontend Link](https://github.com/johanBautista/AHA-frontend).
+- [Repository Frontend Link](https://github.com/johanBautista/AHA-frontend)
+
 ​
--[Repository Backend Link](https://github.com/johanBautista/AHA-backend).
+- [Repository Backend Link](https://github.com/johanBautista/AHA-backend)
+
 ​
--[Deploy Link Backend](http://heroku.com/)
+- [Deploy Link Backend](http://heroku.com/)
+
 ​
--[Deploy Link Frontend](https://aha-moment.netlify.com/)
+- [Deploy Link Frontend](https://aha-moment.netlify.com/)
+
 
 ### Slides
 
