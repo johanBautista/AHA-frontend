@@ -1,7 +1,5 @@
 ## StarterKit Frontend module 3
 
-**importante** cambiar el `.env-sample` a `.env` con vuestras variables de entorno​
-
 # ​AHA-Moment
 
 ## Description
@@ -46,63 +44,31 @@ We are all geniuses, the problem is not knowing what. AHA-Moment is the app wher
 | Home         | /                 |
 | Log in       | /login            |
 | Sign up      | /signup           |
-| List         | /quote            |
-| detail       | /quote/:id        |
-| Update       | /quote/:id/update |
-| Delete       | /quote/:id/delete | ​   |
-| User         | /user             | ​   |
-| Edit profile | /user/edit        | ​   |
+| List         | /quotes            |
+| detail       | /quotes/:id        |
+| Update       | /quotes/:id/update |
+| Delete       | /quotes/:id/delete | ​   |
+| Events       | /events             | ​   |
 
-## Models
 
-User model
-
-```
- username: { type: String, required: true, unique: true },
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true, unique: true },
-  category: { type: String, required: true },
-  ocupation: { type: String, required: true }
-```
-
-Event model
-
-```
- <!-- title: { type: String, required: true, unique: true },
-  description: { type: ObjectId, ref: "User"},
-  owner: { type: ObjectId, ref: "User"},
-  date: { type: Date, required: true },
-  location: { type: String, required: true } -->
-```
-
-Quote model
-
-```
- text: { type: String, required: true, unique: true },
- owner: { type: ObjecId, ref: "User", unique: true },
- date: { type: Date },
- location: { type: String },
- theme: { type: String, required: true }
-```
 
 ## Links
-
-​
 
 ### Git
 
 ​
 The url to your repository and to your deployed project
 ​
-[Repository Frontend Link](http://github.com/)
+-[Repository Frontend Link](https://github.com/johanBautista/AHA-frontend)
 ​
-[Repository Backend Link](http://github.com/)
+-[Repository Backend Link](https://github.com/johanBautista/AHA-backend)
 ​
-[Deploy Link](http://heroku.com/)
+-[Deploy Link Backend](http://heroku.com/)
 ​
+-[Deploy Link Frontend](https://aha-moment.netlify.com/)
 
 ### Slides
 
 ​
-[Slides Link](http://slides.com/)
-Contrae
+[Slides Link](https://slides.com/johansbautistaparra/deck-2)
+

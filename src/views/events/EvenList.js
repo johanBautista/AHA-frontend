@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { withAuth } from '../../Context/AuthContext';
 import logo from '../../img/logo.png';
 import eventService from '../../services/eventService';
 
@@ -43,5 +42,4 @@ class EvenList extends Component {
   }
 }
 
-// export default withAuth(EvenList);
 export default EvenList;
