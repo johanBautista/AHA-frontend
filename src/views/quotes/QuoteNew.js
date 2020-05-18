@@ -12,27 +12,37 @@ class QuoteNew extends Component {
     theme: '',
     owner: this.props.user._id,
     // loading: true,
+    error: false,
   };
 
   // evento q se genera
   handleChange = event => {
-    let { name, value } = event.target;
+    const { name, value } = event.target;
     this.setState({ [name]: value });
   };
 
   // lo q tengo q subir
   handleFormSubmit = async event => {
     event.preventDefault();
-    await quoteService.createQuotes(this.state);
-    this.setState(
-      {
-        text: '',
-        date: '',
-        location: '',
-        theme: '',
-      },
-      this.props.handleQuote(this.state),
-    );
+    // const { text, date, location, theme } = this.state.quotes;
+
+    // if (text === '' || date === '' || location === '' || theme === '') {
+    //   this.setState({
+    //     error: true,
+    //   });
+    //    //detiene la ejecucion
+    // } else {
+      await quoteService.createQuotes(this.state);
+      this.setState(
+        {
+          text: '',
+          date: '',
+          location: '',
+          theme: '',
+        },
+        this.props.handleQuote(this.state),
+      );
+    // }
   };
 
   render() {
