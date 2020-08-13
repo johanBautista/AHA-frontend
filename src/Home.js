@@ -8,6 +8,7 @@ import QuoteCard from './views/quotes/QuoteCard';
 
 import './index.css';
 
+
 const Home = () => {
   return (
     <div>
@@ -34,7 +35,7 @@ const Home = () => {
         </div>
         <div className="home-features">
           <img className="role-img-home" src={logo} alt="dos" />
-          <span>aha! Moment</span>
+          <span>Ahaa! Moment</span>
         </div>
         <div className="home-features">
           <img className="role-img-home" src={logo3} alt="tres" />
